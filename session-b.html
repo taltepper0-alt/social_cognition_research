@@ -457,87 +457,18 @@
 </div>
 
 <script>
-const FIXED_RESPONSE = `אני סוכן בינה מלאכותית שמטרתו לספק הסבר מושגי ברור, יחד עם הבנה מכנית ויכולת יישום לפתרון בעיות. נבחן את מערכת הגלגלות (Pulley System) משלושה שלבים:
+// Three segments delivered as separate messages with thinking pauses between them
+const SEGMENTS_B = [
+  `אני סוכן בינה מלאכותית שמטרתו לספק הסבר מושגי ברור, יחד עם הבנה מכנית ויכולת יישום לפתרון בעיות. נבחן את מערכת הגלגלות (Pulley System) משלושה שלבים:\n\n**העיקרון המכני** | **הבנת המנגנון** | **יישום בפתרון בעיות**`,
 
-**העיקרון המכני** | **הבנת המנגנון** | **יישום בפתרון בעיות**
+  `## 1. העיקרון המכני\n\nמערכת גלגלות היא מכונה פשוטה שמטרתה להקל על הרמת משאות.\n\nהמערכת יכולה לבצע שני דברים:\n- לשנות את כיוון הכוח\n- להקטין את גודל הכוח הדרוש\n\nהעיקרון הפיזיקלי המרכזי הוא **שימור העבודה**.\n\nהעבודה מוגדרת כך:\n\n\`Work = Force × Distance\`\n\nכאשר משתמשים במערכת גלגלות: אם הכוח קטן → המרחק שבו מושכים את החבל גדל.\n\nהמערכת לא יוצרת אנרגיה חדשה אלא מחלקת את המאמץ בצורה שונה.`,
 
----
+  `## 2. הבנת המנגנון\n\nהעיקרון החשוב ביותר במערכות גלגלות הוא:\n\n> המתיחות בחבל אידיאלי **זהה לכל אורכו**.\n\nלכן כאשר משקל נתמך על ידי כמה מקטעי חבל, כל מקטע נושא חלק מהעומס.\n\n**גלגלת קבועה**\n- משנה רק את כיוון הכוח\n- אינה מקטינה את הכוח הדרוש\n- יתרון מכני: MA = 1\n\n**גלגלת ניידת**\n- המשקל נתמך על ידי שני חבלים\n- יתרון מכני: MA = 2\n- הכוח הדרוש קטן פי שניים\n\n**מערכת גלגלות מורכבת**\n\nהיתרון המכני שווה למספר החבלים התומכים במשקל:\n\n\`F = W / n\`\n\nכאשר: W = המשקל, n = מספר החבלים התומכים במשקל`,
 
-## 1. העיקרון המכני
+  `## 3. יישום בפתרון בעיות\n\n**חישוב כוח**\n\nאם משקל של 300 N מוחזק על ידי 5 חבלים:\n\n\`F = 300 / 5 = 60 N\`\n\n**עבודה**\n\nהעבודה תלויה רק במשקל ובגובה:\n\n\`Work = Force × Distance\`\n\nכל מערכות הגלגלות מבצעות אותה עבודה (בהזנחת חיכוך) כאשר מרימים אותו משקל לאותו גובה.\n\n**אנרגיה פוטנציאלית**\n\nכאשר מרימים גוף לגובה:\n\n\`PE = mgh\`\n\nאם המשקל זהה והגובה זהה — האנרגיה הפוטנציאלית זהה, גם אם השתמשו במערכות גלגלות שונות.\n\n**חיכוך**\n\nחיכוך מגדיל את הכוח הדרוש. לכן גלגלת משומנת היטב תדרוש פחות כוח מאשר גלגלת חלודה.`
+];
 
-מערכת גלגלות היא מכונה פשוטה שמטרתה להקל על הרמת משאות.
-
-המערכת יכולה לבצע שני דברים:
-- לשנות את כיוון הכוח
-- להקטין את גודל הכוח הדרוש
-
-העיקרון הפיזיקלי המרכזי הוא **שימור העבודה**.
-
-העבודה מוגדרת כך:
-
-\`Work = Force × Distance\`
-
-כאשר משתמשים במערכת גלגלות: אם הכוח קטן → המרחק שבו מושכים את החבל גדל.
-
-המערכת לא יוצרת אנרגיה חדשה אלא מחלקת את המאמץ בצורה שונה.
-
----
-
-## 2. הבנת המנגנון
-
-העיקרון החשוב ביותר במערכות גלגלות הוא:
-
-> המתיחות בחבל אידיאלי **זהה לכל אורכו**.
-
-לכן כאשר משקל נתמך על ידי כמה מקטעי חבל, כל מקטע נושא חלק מהעומס.
-
-**גלגלת קבועה**
-- משנה רק את כיוון הכוח
-- אינה מקטינה את הכוח הדרוש
-- יתרון מכני: MA = 1
-
-**גלגלת ניידת**
-- המשקל נתמך על ידי שני חבלים
-- יתרון מכני: MA = 2
-- הכוח הדרוש קטן פי שניים
-
-**מערכת גלגלות מורכבת**
-
-היתרון המכני שווה למספר החבלים התומכים במשקל:
-
-\`F = W / n\`
-
-כאשר: W = המשקל, n = מספר החבלים התומכים במשקל
-
----
-
-## 3. יישום בפתרון בעיות
-
-**חישוב כוח**
-
-אם משקל של 300 N מוחזק על ידי 5 חבלים:
-
-\`F = 300 / 5 = 60 N\`
-
-**עבודה**
-
-העבודה תלויה רק במשקל ובגובה:
-
-\`Work = Force × Distance\`
-
-כל מערכות הגלגלות מבצעות אותה עבודה (בהזנחת חיכוך) כאשר מרימים אותו משקל לאותו גובה.
-
-**אנרגיה פוטנציאלית**
-
-כאשר מרימים גוף לגובה:
-
-\`PE = mgh\`
-
-אם המשקל זהה והגובה זהה — האנרגיה הפוטנציאלית זהה, גם אם השתמשו במערכות גלגלות שונות.
-
-**חיכוך**
-
-חיכוך מגדיל את הכוח הדרוש. לכן גלגלת משומנת היטב תדרוש פחות כוח מאשר גלגלת חלודה.`;
+let currentSegment = 0;
 
 let isTyping = false;
 
@@ -610,75 +541,75 @@ function removeThinking() {
 
 function typeResponse() {
   removeThinking();
+  typeSegment(currentSegment);
+}
+
+function typeSegment(idx) {
+  if (idx >= SEGMENTS_B.length) {
+    isTyping = false;
+    document.getElementById('user-input').disabled = false;
+    return;
+  }
+
+  const text = SEGMENTS_B[idx];
   const container = document.getElementById('msg-container');
   const div = document.createElement('div');
   div.className = 'message';
-  div.innerHTML = `
-    <div class="msg-icon gpt">
-      <svg width="16" height="16" viewBox="0 0 41 41" fill="none">
-        <path d="M37.532 16.87a9.963 9.963 0 00-.856-8.184 10.078 10.078 0 00-10.855-4.835 9.964 9.964 0 00-7.505-3.31 10.079 10.079 0 00-9.612 6.977 9.967 9.967 0 00-6.664 4.834 10.08 10.08 0 001.24 11.817 9.965 9.965 0 00.856 8.185 10.079 10.079 0 0010.855 4.835 9.965 9.965 0 007.504 3.31 10.078 10.078 0 009.617-6.981 9.967 9.967 0 006.663-4.834 10.079 10.079 0 00-1.243-11.813z" fill="currentColor"/>
-      </svg>
-    </div>
-    <div class="msg-content" id="typing-content"><span class="cursor"></span></div>
-  `;
+  const GPT_SVG = `<svg width="16" height="16" viewBox="0 0 41 41" fill="none"><path d="M37.532 16.87a9.963 9.963 0 00-.856-8.184 10.078 10.078 0 00-10.855-4.835 9.964 9.964 0 00-7.505-3.31 10.079 10.079 0 00-9.612 6.977 9.967 9.967 0 00-6.664 4.834 10.08 10.08 0 001.24 11.817 9.965 9.965 0 00.856 8.185 10.079 10.079 0 0010.855 4.835 9.965 9.965 0 007.504 3.31 10.078 10.078 0 009.617-6.981 9.967 9.967 0 006.663-4.834 10.079 10.079 0 00-1.243-11.813z" fill="currentColor"/></svg>`;
+  const uid = 'seg-' + idx;
+  div.innerHTML = `<div class="msg-icon gpt">${GPT_SVG}</div><div class="msg-content" id="${uid}"><span class="cursor"></span></div>`;
   container.appendChild(div);
 
-  const contentEl = document.getElementById('typing-content');
-  const lines = FIXED_RESPONSE.split('\n');
-  let lineIdx = 0;
-  let charIdx = 0;
-  let displayed = '';
+  const contentEl = document.getElementById(uid);
+  const lines = text.split('\n');
+  let lIdx = 0, cIdx = 0, displayed = '';
 
-  function typeNext() {
-    if (lineIdx >= lines.length) {
-      // Done — render final markdown
+  function tick() {
+    if (lIdx >= lines.length) {
+      // Segment done — render final
       contentEl.innerHTML = '<p>' + renderMarkdown(displayed) + '</p>';
-      contentEl.id = '';
-      
-      // Add action buttons
-      const actions = document.createElement('div');
-      actions.className = 'msg-actions';
-      actions.innerHTML = `
-        <button title="העתק">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          העתק
-        </button>
-        <button title="אהבתי">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
-        </button>
-        <button title="לא אהבתי">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 003 3l4-9V2H5.72a2 2 0 00-2 1.7l-1.38 9a2 2 0 002 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0122 4v7a2.31 2.31 0 01-2.33 2H17"/></svg>
-        </button>
-      `;
-      div.appendChild(actions);
-
-      isTyping = false;
-      document.getElementById('user-input').disabled = false;
+      // Add action buttons on last segment
+      if (idx === SEGMENTS_B.length - 1) {
+        const actions = document.createElement('div');
+        actions.className = 'msg-actions';
+        actions.innerHTML = `
+          <button title="העתק"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> העתק</button>
+          <button title="אהבתי"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg></button>
+          <button title="לא אהבתי"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 003 3l4-9V2H5.72a2 2 0 00-2 1.7l-1.38 9a2 2 0 002 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0122 4v7a2.31 2.31 0 01-2.33 2H17"/></svg></button>`;
+        div.appendChild(actions);
+        isTyping = false;
+        document.getElementById('user-input').disabled = false;
+      } else {
+        // Pause then show thinking before next segment
+        currentSegment = idx + 1;
+        setTimeout(() => {
+          addThinking();
+          setTimeout(() => {
+            removeThinking();
+            typeSegment(currentSegment);
+          }, 1400 + Math.random() * 800);
+        }, 1800); // reading pause after segment finishes
+      }
       return;
     }
 
-    const line = lines[lineIdx];
-    if (charIdx < line.length) {
-      displayed += line[charIdx];
-      charIdx++;
-
-      // Live partial render (simplified)
-      const preview = displayed + (lineIdx < lines.length - 1 ? '' : '');
-      contentEl.innerHTML = '<p>' + renderMarkdown(preview) + '</p><span class="cursor"></span>';
+    const line = lines[lIdx];
+    if (cIdx < line.length) {
+      displayed += line[cIdx++];
+      contentEl.innerHTML = '<p>' + renderMarkdown(displayed) + '</p><span class="cursor"></span>';
       scrollToBottom();
-
-      // Vary speed
-      const delay = line.startsWith('#') ? 18 : line.startsWith('`') ? 8 : 12;
-      setTimeout(typeNext, delay);
+      // Slower typing: 28ms base, slower on headers
+      const delay = line.startsWith('##') ? 45 : line.startsWith('`') ? 20 : 28;
+      setTimeout(tick, delay);
     } else {
       displayed += '\n';
-      lineIdx++;
-      charIdx = 0;
-      setTimeout(typeNext, 20);
+      lIdx++; cIdx = 0;
+      // Extra pause at blank lines for readability
+      const pauseDelay = line.trim() === '' ? 180 : 35;
+      setTimeout(tick, pauseDelay);
     }
   }
-
-  typeNext();
+  tick();
 }
 
 
